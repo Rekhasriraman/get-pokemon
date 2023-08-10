@@ -1,5 +1,7 @@
 const dom = {
-    root: document.getElementById('root'),
+    searchBar: document.querySelector('.search-bar'),
+    searchBtn: document.querySelector('.search-button'),
+    container: document.getElementById('pokemon-container'),
 };
 
 export default dom;

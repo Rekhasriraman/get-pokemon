@@ -1,7 +1,14 @@
-import loadHandler from '../handlers/loadHandler.js';
+import getPokemonHandler from "../handlers/loadHandler.js";
+import dom from "../dom.js"
 
-const loadEvent = () => {
-    window.addEventListener('DOMContentLoaded', loadHandler);
+const getPokemonListener = () => {
+dom.searchBtn.addEventListener('click', getPokemonHandler)
 };
 
-export default loadEvent;
+dom.searchBar.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        getPokemonHandler();
+    }
+});
+
+export default getPokemonListener;
